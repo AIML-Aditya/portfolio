@@ -1,0 +1,152 @@
+.header{
+  display:flex;
+  box-shadow:0 1px 10px -5px rgba(98, 76, 34, 0.65);
+  padding: 10px 0;
+  justify-content: space-between;
+  position: fixed;
+  z-index:100;
+  top:0;
+  right:0;
+  left:0;
+  background-color: white;
+}
+.logo
+{
+  width:100px;
+}
+.left-part
+{
+  display: flex;
+  align-items: center;
+  gap:20px;
+}
+.left-part span
+{
+  display: flex;
+  align-items: center;
+}
+.left-part a
+{
+  font-size:15px;
+  font-weight:900;
+}
+.logo-text
+{
+  color:#484848;
+  font-size:28px;
+  font-weight:900;
+}
+.left-part .new-cars-header
+{
+  cursor: pointer;
+  position:relative;
+}
+.left-part .new-cars-header .extend-newcars
+{
+position:absolute;
+display: flex;
+opacity: 0;
+background-color: rgb(195, 193, 189);
+white-space: nowrap;
+gap: 8px;
+top: 16px;
+visibility: hidden;
+pointer-events: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+z-index: 10;
+transition: opacity 0.3s;
+}
+.left-part .new-cars-header:hover .extend-newcars
+{
+opacity: 1;
+visibility: visible;
+padding: 25px 25px;
+text-decoration: underline black;
+pointer-events: auto;
+}
+.left-part .used-cars-header
+{
+  cursor: pointer;
+  position:relative;
+}
+.left-part .used-cars-header .extend-usedcars
+{
+position:absolute;
+display: flex;
+opacity: 0;
+background-color: rgb(195, 193, 189);
+white-space: nowrap;
+gap: 8px;
+top: 16px;
+visibility: hidden;
+pointer-events: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+z-index: 10;
+transition: opacity 0.3s;
+}
+.left-part .used-cars-header:hover .extend-usedcars
+{
+opacity: 1;
+visibility: visible;
+padding: 25px 25px;
+text-decoration: underline black;
+pointer-events: auto;
+}
+
+.left-part .newsreviews-header
+{
+  cursor: pointer;
+  position:relative;
+}
+.left-part .newsreviews-header .extend-newsreviews
+{
+position:absolute;
+display: flex;
+opacity: 0;
+background-color: rgb(195, 193, 189);
+white-space: nowrap;
+gap: 8px;
+top: 16px;
+visibility: hidden;
+pointer-events: none;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+z-index: 10;
+transition: opacity 0.3s;
+}
+.left-part .newsreviews-header:hover .extend-newsreviews
+{
+opacity: 1;
+visibility: visible;
+padding: 25px 25px;
+text-decoration: underline black;
+pointer-events: auto;
+}
+
+.right-part
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.right-part img
+{
+width:39px;
+} 
+.magnify
+{
+
+  width: 280px;
+  height:30px;
+    padding: 8px 35px 8px 10px; /* leave space for icon */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background: url('search.png') no-repeat right 10px center;
+    background-size: 18px;
+    position: relative;
+}
+.magnify::placeholder
+{
+  font-size: 21px;
+  position: absolute;
+  bottom: 11px;
+}

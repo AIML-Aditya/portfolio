@@ -1,0 +1,111 @@
+.drawer
+{
+  margin: 30px 170px;
+}
+.choice-content
+{
+  background-color: rgb(249 249 249);
+  display:flex;
+  flex-direction: column;
+}
+.drawer .budget-row, .body-type, .fuel-others
+{
+  display:flex;
+  gap: 20px;
+}
+header .title{
+  font-size:27px;
+  margin: 15px 0;
+  Font-weight: 600;
+  color: rgb(59, 52, 52);
+
+}
+.choice-content .budget-row, .body-type, .fuel-others
+{
+  display:flex;
+  align-items: center;
+  margin: 25px 0;
+}
+.choice-content .budget-row p,
+.choice-content .body-type p,
+.choice-content .fuel-others p
+{
+  font-size: 17px;
+  margin: 0 15px; 
+}
+.choice-content .budget-row a
+{
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+padding:15px 30px 15px 30px; 
+margin:0 0 0 32px;
+background: url('icons/money-bag-icon-free-vector.jpg') no-repeat left center;
+background-size: 25px;
+}
+.choice-content .body-type a
+{
+  border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+padding:15px 30px 15px 30px; 
+background: url('icons/car\ front.png') no-repeat left center;
+background-size: 25px;
+margin: 0 0 0 32px;
+}
+.view-more
+{
+  display:inline-block;
+  margin:25px 10px;
+  cursor:pointer;
+}
+.fuel-others a[data-icon="electric"]
+{
+background: url(icons/voltage.png) no-repeat left center;
+background-size: 25px;
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+margin: 0 0 0 32px;
+padding:15px 30px 15px 30px; 
+}
+.fuel-others a[data-icon="hybrid"]
+{
+background: url(icons/hybrid\ car.avif) no-repeat left center;
+background-size: 25px;
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+margin: 0 0 0 32px;
+padding:15px 30px 15px 30px;
+}
+.fuel-others a[data-icon="cng"]
+{
+background: url(icons/cng\ gasoline.png) no-repeat left center;
+background-size: 25px;
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+margin: 0 0 0 32px;
+padding:15px 30px 15px 30px;
+}
+.fuel-others a[data-icon="seater"]
+{
+background: url(icons/car-seat.png) no-repeat left center;
+background-size: 25px;
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+margin: 0 0 0 32px;
+padding:15px 30px 15px 30px;
+}
+.fuel-others a[data-icon="auto"]
+{
+background: url(icons/transmission.png) no-repeat left center;
+background-size: 25px;
+border: 1px solid rgb(147, 137, 137);
+border-radius:8px;
+display: inline-block;
+margin: 0 0 0 32px;
+padding:15px 30px 15px 30px;
+}

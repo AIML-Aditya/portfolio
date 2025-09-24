@@ -1,0 +1,49 @@
+.close-bar
+{
+  background-color:rgb(0 43 81);
+  color:white;
+}
+.firo
+{
+  display: flex;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.firo .right-part p{
+  margin:20px 70px;
+  font-size: 12px;
+}
+.firo .left-part p
+{
+  font-size: 12px;
+}
+.firo .right-part
+{
+  border-left: 2px white solid;
+  margin-left: 20px;
+}
+.sero{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 150px;
+}
+.sero .left-part .social-icons img, svg{
+  width:35px;
+  color:white;
+}
+.sero .right-part{
+margin: 0 80px;
+}
+.sero .right-part img{
+  width:90px;
+}
+.thro
+{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  margin:30px 90px;
+}

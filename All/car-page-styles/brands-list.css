@@ -1,0 +1,51 @@
+.brands
+{
+  margin: 100px 170px;
+}
+.brands .heading
+{
+  Font-weight:600;
+  color:rgb(59, 52, 52);
+  font-size:30px;
+  text-align: start;
+}
+.brands p
+{
+  Font-weight:300;
+  color:rgb(59, 52, 52);
+  font-size:23px;
+  text-align: center;
+}
+.brands-list
+{
+  display: grid;
+  border-radius: 8px;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  border-color:rgb(168, 156, 156);
+  border: 1px solid;
+}
+ details summary 
+ {
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    list-style:none;
+  }
+.brands-list a {
+  border: 1px solid rgb(148, 133, 133);
+  padding: 10px;
+  text-align: center;
+  display: flex;              /* make it flex */
+  flex-direction: column;     /* stack image and name vertically */
+  align-items: center;        /* center them horizontally */
+  justify-content: center;    /* center them vertically */
+  text-decoration: none;      /* remove underline */
+}
+
+.brands-list img 
+{
+height:auto;
+width: 88px;
+}

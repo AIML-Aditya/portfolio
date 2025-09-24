@@ -1,0 +1,130 @@
+.choose-menu
+{
+  display:flex;
+  position: relative;
+}
+.choose-menu .impress-img
+{
+    width: 100%;
+    height: auto;
+}
+.choice-box
+{
+  position: absolute;
+  top:460px;
+  right:200px;
+  left:200px;
+  padding: 50px 50px;
+  background-color: white;
+  border-radius:15px;
+  box-shadow: 1px 0 6px  rgba(46, 58 ,64, 0.6);
+}
+.choice-box .fr
+{
+  display: flex;
+  justify-content: space-between;
+}
+.choice-box .fr p
+{
+  font-size: 27px;
+  color:#333;
+  font-weight: 600;
+}
+.choice-box .fr button{
+  background: url('icons/location.png') no-repeat right 15px center;
+  background-size: 25px;
+  width: 150px;
+  font-size: 17px;
+  text-align: start;
+  border:none;
+  padding: 5px 3px;
+}
+.choice-box .sr{
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.choice-box .sr .input-container
+{
+  position: relative;
+  margin: 20px 0;
+  width: 1200px;
+  height: 50px;
+  padding-left: 140px;
+  background: url("icons/search.png") no-repeat right 10px center;
+  background-size: 25px;
+  border-radius: 25px;
+  font-weight:300;
+  font-size: 20px;
+  border: 2px solid rgb(149, 137, 137);
+}
+.choice-box .sr .new-btn
+{
+left:130px;
+position: absolute;
+background-color: rgb(178, 224, 209);
+z-index:20;
+font-size: 19px;
+border-radius: 10px;
+border: none;
+}
+.choice-box .sr .used-btn
+{
+left:70px;
+position: absolute;
+z-index:10;
+background-color: rgb(178, 224, 209);
+font-size: 19px;
+border-radius: 10px;
+border: none;
+}
+.choice-box .sr .input-container::placeholder
+{
+  font-weight:400;
+  font-size:19px;
+}
+.tr 
+{
+  display: flex;
+  gap: 50px;
+}
+.tr .btn-budget
+{
+  font-size:16px;
+  border: 1px solid #1e1e1e;
+  border-radius:8px;
+  padding: 10px 3px 10px 40px;
+  text-align: end;
+  background: url('icons/wallet-6551548.svg') no-repeat 10px center;
+  background-size: 25px;
+}
+.tr .btn-transmission
+{
+font-size:16px;
+  border: 1px solid #1e1e1e;
+  border-radius:8px;
+  padding: 10px 3px 10px 40px;
+  text-align: end;
+  background: url('icons/gear-189253.svg') no-repeat 10px center;
+  background-size: 25px;
+}
+.tr .btn-fueltype
+{
+font-size:16px;
+  border: 1px solid #1e1e1e;
+  border-radius:8px;
+  padding: 10px 3px 10px 40px;
+  text-align: end;
+  background: url('icons/fuel.svg.svg') no-repeat 10px center;
+  background-size: 25px;
+}
+.tr .btn-bodytype
+{
+font-size:16px;
+  border: 1px solid #1e1e1e;
+  border-radius:8px;
+  padding: 10px 3px 10px 40px;
+  text-align: end;
+  background: url('icons/sports-car-303765.svg') no-repeat 10px center;
+  background-size: 25px;
+}

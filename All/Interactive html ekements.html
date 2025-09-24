@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive HTML Elements Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: darkblue;
+    }
+    .box {
+      border: 1px solid #aaa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 Interactive HTML Elements Demo</h1>
+
+  <!-- Links -->
+  <section>
+    <h2>🔗 Links</h2>
+    <a href="https://www.google.com" target="_blank">Go to Google</a>
+  </section>
+
+  <!-- Buttons -->
+  <section>
+    <h2>🔘 Buttons</h2>
+    <button>Normal Button</button>
+    <button type="submit">Submit Button</button>
+    <button type="reset">Reset Button</button>
+  </section>
+
+  <!-- Inputs -->
+  <section>
+    <h2>⌨️ Inputs</h2>
+    <form class="box">
+      <label>Text: <input type="text" placeholder="Type here..."></label><br><br>
+      <label>Password: <input type="password"></label><br><br>
+      <label>Email: <input type="email"></label><br><br>
+      <label>Number: <input type="number"></label><br><br>
+      <label>Range: <input type="range"></label><br><br>
+      <label>Date: <input type="date"></label><br><br>
+      <label>Time: <input type="time"></label><br><br>
+      <label>Color: <input type="color"></label><br><br>
+      <label>Checkbox: <input type="checkbox"></label><br><br>
+      <label>Radio: <input type="radio" name="radio-demo"></label><br><br>
+      <label>File Upload: <input type="file"></label><br><br>
+      <label>Search: <input type="search"></label><br><br>
+      <label>With Datalist: 
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="Chrome">
+          <option value="Firefox">
+          <option value="Edge">
+          <option value="Safari">
+        </datalist>
+      </label>
+    </form>
+  </section>
+
+  <!-- Select -->
+  <section>
+    <h2>📋 Select Dropdown</h2>
+    <select>
+      <option>Apple</option>
+      <option>Banana</option>
+      <option>Orange</option>
+    </select>
+  </section>
+
+  <!-- Textarea -->
+  <section>
+    <h2>📝 Textarea</h2>
+    <textarea rows="3" cols="30">Type something...</textarea>
+  </section>
+
+  <!-- Output -->
+  <section>
+    <h2>🧮 Output</h2>
+    <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+      <input type="number" id="a" value="5"> + 
+      <input type="number" id="b" value="10"> = 
+      <output name="result"></output>
+    </form>
+  </section>
+
+  <!-- Progress & Meter -->
+  <section>
+    <h2>📊 Progress & Meter</h2>
+    <progress value="70" max="100"></progress><br><br>
+    <meter value="0.7" min="0" max="1">70%</meter>
+  </section>
+
+  <!-- Fieldset -->
+  <section>
+    <h2>🗂 Fieldset</h2>
+    <fieldset>
+      <legend>Login</legend>
+      <input type="text" placeholder="Username"><br><br>
+      <input type="password" placeholder="Password">
+    </fieldset>
+  </section>
+
+  <!-- Details & Summary -->
+  <section>
+    <h2>📂 Details & Summary</h2>
+    <details>
+      <summary>Click to expand</summary>
+      <p>This is hidden content that appears when expanded!</p>
+    </details>
+  </section>
+
+  <!-- Media -->
+  <section>
+    <h2>🎵 Audio & 🎥 Video</h2>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+    </audio><br><br>
+    <video controls width="300">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- Dialog -->
+  <section>
+    <h2>Dialog</h2>
+    <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+    <dialog id="myDialog">
+      <p>This is a native dialog!</p>
+      <button onclick="document.getElementById('myDialog').close()">Close</button>
+    </dialog>
+  </section>
+
+  <!-- Editable Content -->
+  <section>
+    <h2>✏️ Contenteditable</h2>
+    <div contenteditable="true" class="box">
+      You can edit this text directly!
+    </div>
+  </section>
+
+</body>
+</html>
