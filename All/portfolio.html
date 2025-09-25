@@ -1,109 +1,120 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Aditya sahu portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" 
-    rel="stylesheet">
-    <link rel="stylesheet" href="portfolio-styles/about.css">
-    <link rel="stylesheet" href="portfolio-styles/header.css">
-    <link rel="stylesheet" href="portfolio-styles/general.css">
-    <link rel="stylesheet" href="portfolio-styles/projects.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="left-section">
-        <p>ADITYA SAHU</p>
-      </div>
-      <div class="right-section">
-        <a>Home</a>
-        <a>Projects</a>
-        <a>About</a>
-        <a>Contact</a>
-      </div>       
-   </header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aditya Sahu Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="portfolio-styles/general.css">
+  <link rel="stylesheet" href="portfolio-styles/header.css">
+  <link rel="stylesheet" href="portfolio-styles/about.css">
+  <link rel="stylesheet" href="portfolio-styles/projects.css">
+</head>
+<body>
 
-    <div class="about-container">
-        <div class="upper-part">
-          <div class="text-part">
-            <div class="my-work">
-              <span>Front-End React Developer</span>
-              <div class="open-to-work-badge">
-                <span class="dot"></span><a class="msgtome"href="mailto:yourname@gmail.com">
-                  Hire me</a>
-              </div>
-            </div>
-            <div class="bio">Hello, I'm Aditya Sahu. A Passionate Front-End React Developer.
-              Based in Chhattisgarh, India.
-            </div>
-            <div class="other-sites">
-              <a href="https://www.linkedin.com/in/aditya-sahu-b1b044251" target="_blank">
-                <img src="icons/linkedin1.png">
-              </a>
-              <a href="https://github.com/AIML-Aditya" target="_blank">
-                <img src="icons/github.png">
-              </a>
-            </div>
-          </div>
-          <div class="img-part">
-            <img src="profile-pic/passport size photo.jpg" alt="Profile" class="my-img"> 
+  <!-- Header -->
+  <header class="header">
+    <div class="left-section">
+      <p>ADITYA SAHU</p>
+    </div>
+    <div class="right-section">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>       
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="about-container">
+    <div class="upper-part">
+      <div class="text-part">
+        <div class="my-work">
+          <span>Front-End React Developer</span>
+          <div class="open-to-work-badge">
+            <span class="dot"></span>
+            <a class="msgtome" href="mailto:yourname@gmail.com">Hire me</a>
           </div>
         </div>
+        <div class="bio">
+          Hello, I'm Aditya Sahu. A Passionate Front-End React Developer.
+          Based in Chhattisgarh, India.
+        </div>
+        <div class="other-sites">
+          <a href="https://www.linkedin.com/in/aditya-sahu-b1b044251" target="_blank">
+            <img src="icons/linkedin1.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/AIML-Aditya" target="_blank">
+            <img src="icons/github.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+      <div class="img-part">
+        <img src="profile-pic/passport size photo.jpg" alt="Profile" class="my-img"> 
+      </div>
+    </div>
 
-        <div class="lower-part">
-          <div class="text-part">Tech Stack &vert;</div>
-            <div class="language-icons">
-            <i class="devicon-html5-plain colored"></i>
-            <i class="devicon-css3-plain colored"></i>
-            <i class="devicon-javascript-plain colored" ></i>
-            <i class="devicon-tailwindcss-plain colored" ></i>
-            <i class="devicon-react-plain colored"></i>
-            <i class="devicon-sass-plain colored"></i> 
-            </div>   
+    <div class="lower-part">
+      <div class="text-part">Tech Stack &vert;</div>
+      <div class="language-icons">
+        <i class="devicon-html5-plain colored"></i>
+        <i class="devicon-css3-plain colored"></i>
+        <i class="devicon-javascript-plain colored"></i>
+        <i class="devicon-tailwindcss-plain colored"></i>
+        <i class="devicon-react-plain colored"></i>
+        <i class="devicon-sass-plain colored"></i> 
+      </div>   
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects-header">
+      <span>PROJECTS</span>
+      <div class="moto">Every project is crafted with precision and purpose</div>
+    </div>
+
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project">
+        <img src="cars page.png" alt="JDCARS Preview" class="project-img">
+        <div class="project-info">
+          <h3>JDCARS</h3>
+          <p class="underdevelopment">IN DEVELOPMENT</p>
+          <p>A simple project I built with HTML & CSS</p>
+          <a href="carspage.html" target="_blank" class="btn">Live Demo</a>
+          <a href="https://github.com/AIML-Aditya/portfolio/blob/main/All/carspage.html" target="_blank" class="btn">Source Code</a>
         </div>
       </div>
 
-      <div class="projects-header">
-  <span>PROJECTS</span>
-  <div class="moto">Every project is crafted with precision and purpose</div>
-</div>
-<div class="projects-container">
-  <!-- Project 1 -->
-  <div class="project">
-    <img src="cars page.png" alt="My Project Preview" class="project-img">
-    <div class="project-info">
-      <h3>JDCARS</h3>
-      <p class="underdevelopment">IN DEVELOPMENT</p>
-      <p>A simple project I built with HTML & CSS</p>
-      <a href="carspage.html" target="_blank" class="btn">Live Demo</a>
-      <a href="https://github.com/AIML-Aditya/portfolio/blob/main/All/carspage.html" target="_blank" class="btn">Source Code</a>
-    </div>
-  </div>
+      <!-- Project 2 -->
+      <div class="project">
+        <img src="projects/my-project2/screenshot.png" alt="Project 2 Preview" class="project-img">
+        <div class="project-info">
+          <h3>Another Project</h3>
+          <p>A responsive webpage I designed to practice layouts and animations.</p>
+          <a href="projects/my-project2/index.html" target="_blank" class="btn">Live Demo</a>
+          <a href="https://github.com/yourusername/my-project2" target="_blank" class="btn">Source Code</a>
+        </div>
+      </div>
 
-  <!-- Project 2 -->
-  <div class="project">
-    <img src="projects/my-project2/screenshot.png" alt="My Project 2 Preview" class="project-img">
-    <div class="project-info">
-      <h3>Another Project</h3>
-      <p>A responsive webpage I designed to practice layouts and animations.</p>
-      <a href="projects/my-project2/index.html" target="_blank" class="btn">Live Demo</a>
-      <a href="https://github.com/yourusername/my-project2" target="_blank" class="btn">Source Code</a>
+      <!-- Project 3 -->
+      <div class="project">
+        <img src="projects/my-project3/screenshot.png" alt="Project 3 Preview" class="project-img">
+        <div class="project-info">
+          <h3>Portfolio Template</h3>
+          <p>A clean portfolio template built with modern HTML, CSS, and Flexbox.</p>
+          <a href="projects/my-project3/index.html" target="_blank" class="btn">Live Demo</a>
+          <a href="https://github.com/yourusername/my-project3" target="_blank" class="btn">Source Code</a>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Project 3 -->
-  <div class="project">
-    <img src="projects/my-project3/screenshot.png" alt="My Project 3 Preview" class="project-img">
-    <div class="project-info">
-      <h3>Portfolio Template</h3>
-      <p>A clean portfolio template built with modern HTML, CSS, and Flexbox.</p>
-      <a href="projects/my-project3/index.html" target="_blank" class="btn">Live Demo</a>
-      <a href="https://github.com/yourusername/my-project3" target="_blank" class="btn">Source Code</a>
-    </div>
-  </div>
-</div>
-
-  </body>
+</body>
 </html>
