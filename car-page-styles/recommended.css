@@ -1,90 +1,32 @@
 .recommended {
-  background-color: rgb(244, 247, 250);
-  padding: clamp(1rem, 3vw, 1.5rem); /* Responsive padding */
-  margin: clamp(2rem, 5vw, 3rem) 5vw 0; /* Responsive margins, centered */
-  max-width: 90vw; /* Limit width for responsiveness */
-  margin-left: auto;
-  margin-right: auto;
+  background-color: rgb(244 247 250);
+  padding: 20px;
+  margin-top: 250px; /* instead of top: 890px */
+  margin-left:200px;
+  margin-right:200px;
 }
-
 .recommended .recommended-cars {
-  display: flex;
-  gap: clamp(0.75rem, 2vw, 1rem); /* Responsive gap */
-  overflow-x: auto; /* Enables horizontal scroll */
-  scroll-snap-type: x mandatory; /* Snap effect */
-  scroll-behavior: smooth;
-  width: 100%; /* Full width for scroll area */
-  padding-bottom: clamp(0.5rem, 1.5vw, 0.75rem); /* Responsive padding */
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;              /* enables horizontal scroll */
+  scroll-snap-type: x mandatory; /* snap effect */
+  scroll-behavior: smooth;
+  width: 100%;                   /* important: allow scroll area */
+  padding-bottom: 10px;
 }
-
 .recommended .recommended-cars div {
-  flex-shrink: 0; /* Prevent shrinking */
-  width: clamp(12rem, 25vw, 18rem); /* Responsive card width */
-  max-width: 100%; /* Prevent overflow */
+  flex-shrink: 0; /* prevent shrinking */
+  width: 300px;
 }
-
 .recommended .recommended-cars .carpic {
-  width: 100%;
-  height: clamp(8rem, 20vw, 10rem); /* Responsive image height */
-  border-radius: 10px;
-  scroll-snap-align: start;
-  object-fit: cover; /* Ensure images scale properly */
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  scroll-snap-align: start;
 }
-
-.recommended-cars .modelname {
-  font-weight: 500;
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem); /* Responsive font size */
-  color: rgb(59, 52, 52);
-  margin-top: 0.5rem;
-}
-
-/* Tablet screens (up to 1024px) */
-@media (max-width: 1024px) {
-  .recommended {
-    padding: clamp(0.75rem, 2vw, 1rem);
-    margin: clamp(1.5rem, 4vw, 2rem) 3vw 0;
-    max-width: 95vw;
-  }
-
-  .recommended .recommended-cars {
-    gap: clamp(0.5rem, 1.5vw, 0.75rem);
-  }
-
-  .recommended .recommended-cars div {
-    width: clamp(10rem, 30vw, 15rem);
-  }
-
-  .recommended .recommended-cars .carpic {
-    height: clamp(7rem, 18vw, 9rem);
-  }
-
-  .recommended-cars .modelname {
-    font-size: clamp(0.8rem, 2vw, 1rem);
-  }
-}
-
-/* Mobile screens (up to 600px) */
-@media (max-width: 600px) {
-  .recommended {
-    padding: clamp(0.5rem, 1.5vw, 0.75rem);
-    margin: clamp(1rem, 3vw, 1.5rem) 2vw 0;
-    max-width: 100vw;
-  }
-
-  .recommended .recommended-cars {
-    gap: clamp(0.5rem, 1vw, 0.5rem);
-    padding-bottom: 0.5rem;
-  }
-
-  .recommended .recommended-cars div {
-    width: clamp(9rem, 45vw, 12rem); /* Smaller cards for mobile */
-  }
-
-  .recommended .recommended-cars .carpic {
-    height: clamp(6rem, 25vw, 8rem);
-  }
-
-  .recommended-cars .modelname {
-    font-size: clamp(0.7rem, 1.8vw, 0.9rem);
-  }
+.recommended-cars .modelname
+{
+  font-weight: 500;
+  font-size:21px;
+  color:rgb(59, 52, 52);
 }
