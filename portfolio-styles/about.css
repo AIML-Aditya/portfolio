@@ -1,53 +1,97 @@
-.about-container {
+.about-container
+{
+display: flex;
+position: absolute;
+flex-direction: column;
+top:200px;
+right:360px;
+}
+
+.bio
+{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  width:330px;
+  Font-size:20px;
+  line-height:21px;
+  margin-right:50px;
+  margin-bottom:20px;
+  margin-top:20px;
 }
-
-.upper-part {
+.upper-part
+{
   display: flex;
-  flex-direction: column;
+}
+.upper-part .text-part
+{
+  width: 300px;
+}
+.my-img
+{
+  width:180px;
+  border-radius:130px;
+  margin-left:100px;
+}
+.my-work {
+  position: relative;           /* Make it a positioning context */
+  font-weight: 600;
+  font-size: 40px;
+  width: 330px;
+  line-height: 1.2;
+  color: #000;
+}
+
+/* The green "Open to work" badge */
+.open-to-work-badge {
+  position: absolute;
+  right:60px;
+  bottom: 0;
+  background-color: rgba(164, 196, 164, 0.3);
+  color: rgb(22, 101, 52); /* darker green text */
+  font-size: 16px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  display: inline-flex;
   align-items: center;
-  gap: 20px;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 
-.upper-part .text-part {
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
+.open-to-work-badge:hover {
+  background-color: rgba(164, 196, 164, 0.5);
+  color: rgb(20, 83, 45);
 }
 
-.my-img {
-  width: 180px;
-  border-radius: 50%;
+.open-to-work-badge .dot {
+  width: 8px;
+  height: 8px;
+  background-color: rgb(22, 101, 52);
+  border-radius: 9999px;
+  margin-right: 6px;
+  display: inline-block;
+}
+.msgtome
+{
+  text-decoration: none;
 }
 
-.lower-part {
+.lower-part
+{
   display: flex;
-  flex-direction: column;
+  margin-top: 70px;
   align-items: center;
-  gap: 15px;
-  margin-top: 40px;
 }
-
-.lower-part .language-icons {
-  font-size: 2rem;
-  gap: 20px;
+.lower-part .language-icons
+{
+  display: flex;
+  font-size: 30px;
+  gap: 40px;
 }
-
-@media screen and (min-width: 768px) {
-  .upper-part {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .text-part {
-    text-align: left;
-  }
-
-  .lower-part {
-    flex-direction: row;
-  }
+.lower-part .text-part
+{
+  font-size: 23px;
+  margin-right: 30px;
+}
+.other-sites img
+{
+  width:30px;
 }
