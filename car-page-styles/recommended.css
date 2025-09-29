@@ -1,32 +1,32 @@
 .recommended {
-  background-color: rgb(244 247 250);
-  padding: 20px;
-  margin-top: 250px; /* instead of top: 890px */
-  margin-left:200px;
-  margin-right:200px;
+background-color: rgb(244 247 250);
+padding: 20px;
+margin-top: 250px; /* instead of top: 890px */
+margin-left:200px;
+margin-right:200px;
 }
 .recommended .recommended-cars {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;              /* enables horizontal scroll */
-  scroll-snap-type: x mandatory; /* snap effect */
-  scroll-behavior: smooth;
-  width: 100%;                   /* important: allow scroll area */
-  padding-bottom: 10px;
+ display: flex;
+ gap: 20px;
+ overflow-x: auto;              /* enables horizontal scroll */
+ scroll-snap-type: x mandatory; /* snap effect */
+ scroll-behavior: smooth;
+ width: 100%;                   /* important: allow scroll area */
+ padding-bottom: 10px;
 }
 .recommended .recommended-cars div {
-  flex-shrink: 0; /* prevent shrinking */
-  width: 300px;
+ flex-shrink: 0; /* prevent shrinking */
+ width: 300px;
 }
 .recommended .recommended-cars .carpic {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
-  scroll-snap-align: start;
+ width: 100%;
+ height: 150px;
+ border-radius: 10px;
+ scroll-snap-align: start;
 }
 .recommended-cars .modelname
 {
-  font-weight: 500;
-  font-size:21px;
-  color:rgb(59, 52, 52);
+ font-weight: 500;
+ font-size:21px;
+ color:rgb(59, 52, 52);
 }
