@@ -1,8 +1,10 @@
 .projects-header {
-  position: absolute;
-  top: 700px;
-  right: 500px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+    
 }
 
 .projects-header span {
@@ -21,25 +23,31 @@
   color: #333;
 }
 
-.projects-container {
-  position: absolute;
-  top: 800px;
-  right: 400px;
+.page-center2
+{
   display: flex;
-  flex-direction: column; /* makes vertical list */
-  gap: 30px; /* space between each project */
-  width: 600px; /* control width */
- 
-  height:400px;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column; /* stack projects vertically */
+  gap: 30px;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
 }
 
 .project {
   display: flex;
   gap: 20px;
   background:white;
+  justify-content: center;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  height: auto; /* 🔹 increase card height */
+ /* 🔹 increase card height */
    padding-left: 10px;
   align-items: center; /* centers content vertically */
 }
@@ -81,4 +89,68 @@
 {
   color: red;
   font-size: 21 px;
+}
+
+@media(max-width: 720px)
+{
+
+.projects-header 
+{
+  position: relative;
+  top: 150px;
+  left: 110px;
+}
+
+.projects-header span 
+{
+  top: 470px;
+  left: 220px;
+}
+
+.projects-header .moto 
+{
+  top: 470px;
+  left: 220px;
+}
+
+.projects-container 
+{
+  position: relative;
+  top: 170px;
+  left: 110px;
+  display: flex;
+  flex-direction: column; /* makes vertical list */
+}
+
+.project {
+  display: flex;
+  gap: 20px;
+  
+  height: auto; /* 🔹 increase card height */
+   
+  align-items: center; /* centers content vertically */
+}
+
+.project-img {
+  height: 400px;        /* make image fill the card height */
+  width: 400px;         /* keep aspect ratio */                /* prevent it from getting too wide */
+  object-fit: contain; 
+  /* crop gracefully if needed */
+}
+.project-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px 10px 0 0;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
 }
