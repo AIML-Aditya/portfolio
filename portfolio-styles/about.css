@@ -103,6 +103,13 @@
 
 @media(max-width:720px)
 {
+
+  .page-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* full screen height */
+}
   .about-container
 {
 display: flex;
