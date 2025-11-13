@@ -3,15 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
-    
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 .projects-header span {
   background-color: rgb(69, 170, 206);
   font-weight: 600;
   font-size: 21px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 4px;
   color: white;
 }
@@ -23,61 +23,71 @@
   color: #333;
 }
 
-.page-center2
-{
+/* ✅ Centers content vertically in viewport */
+.page-center2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  min-height: 70vh;
+  flex-direction: column;
 }
 
 .projects-container {
   display: flex;
-  flex-direction: column; /* stack projects vertically */
-  gap: 30px;
-  width: 600px;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
   align-items: center;
   justify-content: center;
+  padding: 0 20px;
 }
 
 .project {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  background:white;
+  background: white;
   justify-content: center;
+  align-items: center;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
- /* 🔹 increase card height */
-   padding-left: 10px;
-  align-items: center; /* centers content vertically */
+  padding: 20px;
+  width: 100%;
 }
 
 .project-img {
-  height: 400px;        /* make image fill the card height */
-  width: 400px;         /* keep aspect ratio */                /* prevent it from getting too wide */
+  width: 100%;
+  max-width: 400px;
   border-radius: 8px;
-  object-fit: contain; 
-  /* crop gracefully if needed */
+  object-fit: contain;
 }
+
+.project-info {
+  flex: 1;
+  text-align: left;
+  min-width: 250px;
+}
+
 .project-info h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .project-info p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin: 8px 0;
 }
 
 .btn {
   display: inline-block;
   margin: 5px 10px 0 0;
-  padding: 6px 12px;
+  padding: 8px 16px;
   background: #45aace;
   color: white;
   text-decoration: none;
   border-radius: 4px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: background 0.2s;
 }
 
@@ -85,72 +95,34 @@
   background: #2d8dad;
 }
 
-.project .project-info .underdevelopment
-{
+.project .project-info .underdevelopment {
   color: red;
-  font-size: 21 px;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-@media(max-width: 720px)
-{
+/* ✅ Mobile-friendly layout */
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 0 10px;
+  }
 
-.projects-header 
-{
-  position: relative;
-  top: 150px;
-  left: 110px;
-}
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.projects-header span 
-{
-  top: 470px;
-  left: 220px;
-}
+  .project-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 
-.projects-header .moto 
-{
-  top: 470px;
-  left: 220px;
-}
+  .project-info {
+    text-align: center;
+  }
 
-.projects-container 
-{
-  position: relative;
-  top: 170px;
-  left: 110px;
-  display: flex;
-  flex-direction: column; /* makes vertical list */
-}
-
-.project {
-  display: flex;
-  gap: 20px;
-  
-  height: auto; /* 🔹 increase card height */
-   
-  align-items: center; /* centers content vertically */
-}
-
-.project-img {
-  height: 400px;        /* make image fill the card height */
-  width: 400px;         /* keep aspect ratio */                /* prevent it from getting too wide */
-  object-fit: contain; 
-  /* crop gracefully if needed */
-}
-.project-info h3 {
-  margin: 0;
-  font-size: 1.2rem;
-}
-
-.project-info p {
-  font-size: 0.95rem;
-  margin: 8px 0;
-}
-
-.btn {
-  display: inline-block;
-  margin: 5px 10px 0 0;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-}
+  .projects-header {
+    margin-top: 40px;
+  }
 }
