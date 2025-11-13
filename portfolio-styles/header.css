@@ -1,44 +1,61 @@
-
-.header
-{
+.header {
   display: flex;
   justify-content: space-between;
-  position: relative;
-}
-.left-section
-{
-  margin: 10px 10px;
-  cursor: pointer;
-  font-size: 31px;
-}
-.right-section
-{
-  cursor: pointer;
-  font-size: 31px;
-  display: flex;
-  gap: 30px;
   align-items: center;
-}
-@media (max-width: 720px)
-{
-  .header
-{
-  display: flex;
-  justify-content:space-between;
- 
-  position: relative;
-  flex-direction: column;
-}
-  .right-section
-{
-  
-  flex-direction: column;
-  gap:30px;
-  
+  padding: 12px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  position: fixed;         /* Keep header on top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Optional: give it a background */
+  z-index: 1000;           /* Keep above other elements */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.left-section
-{
-  position: relative;
+.left-section {
+  cursor: pointer;
+  font-size: 22px;
+  color: black;
 }
-} 
+
+.right-section {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-right:25px;
+}
+
+.right-section a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.right-section a:hover {
+  color: #1d4ed8; /* Optional hover color */
+}
+
+/* ------------ MOBILE VIEW (width ≤ 720px) ------------ */
+@media (max-width: 720px) {
+  .header {
+    padding: 10px 15px;
+    font-size: 18px;
+  }
+
+  .left-section {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .right-section {
+    gap: 15px;
+    margin-right:25px;
+  }
+
+  .right-section a {
+    font-size: 16px;
+  }
+}
