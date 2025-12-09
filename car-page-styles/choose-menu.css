@@ -14,9 +14,6 @@
 }
 .choice-box
 {
-  top:460px;
-  right:200px;
-  left:200px;
   padding: 50px 50px;
   background-color: white;
   border-radius:15px;
@@ -36,7 +33,7 @@
 .choice-box .fr button{
   background: url('icons/location.png') no-repeat right 15px center;
   background-size: 25px;
-  width: 150px;
+  
   font-size: 17px;
   text-align: start;
   border:none;
@@ -51,7 +48,7 @@ align-items: center;
 {
   position: relative;
   margin: 20px 0;
-  width:60%;
+ 
   height: 50px;
   padding-left: 140px;
   background: url("icons/search.png") no-repeat right 10px center;
@@ -74,7 +71,7 @@ border: none;
 .choice-box .sr .used-btn
 {
 left:70px;
-position: absolute;
+
 z-index:10;
 background-color: rgb(178, 224, 209);
 font-size: 19px;
