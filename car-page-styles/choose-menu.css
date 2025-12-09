@@ -1,3 +1,7 @@
+body{
+  margin:0;
+}
+
 .choose-menu
 {
   display:flex;
