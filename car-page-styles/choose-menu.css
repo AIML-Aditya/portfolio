@@ -23,7 +23,7 @@
 }
 .choice-box .fr
 {
-  display: flex;
+ 
   justify-content: space-between;
 }
 .choice-box .fr p
@@ -42,7 +42,7 @@
   padding: 5px 3px;
 }
 .choice-box .sr{
-  display: flex;
+
 justify-content: center;
 align-items: center;
 }
@@ -87,7 +87,7 @@ border: none;
 }
 .tr 
 {
-  display: flex;
+
   gap: 50px;
 }
 .tr .btn-budget
