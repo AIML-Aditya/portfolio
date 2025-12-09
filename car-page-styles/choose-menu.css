@@ -1,7 +1,10 @@
 .choose-menu
 {
   display:flex;
-  position: relative;
+  flex-direction:column;
+  border-style:solid;
+  border-color:red;
+  border-width:15px;
 }
 .choose-menu .impress-img
 {
