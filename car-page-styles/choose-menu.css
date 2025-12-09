@@ -1,7 +1,7 @@
 .choose-menu
 {
   display:flex;
-  flex-direction: column;
+  
  flex:1;
   border-style:solid;
   border-color:red;
