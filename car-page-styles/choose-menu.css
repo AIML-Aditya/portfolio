@@ -4,7 +4,7 @@ body{
 
 .choose-menu
 {
-  
+  width:max-content;
   flex-direction: column;
   width:100%;
   border-style:solid;
