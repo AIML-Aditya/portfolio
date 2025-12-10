@@ -4,9 +4,9 @@ body{
 
 .choose-menu
 {
-  display:flex;
+  
   flex-direction: column;
- width:100%;
+  width:100%;
   border-style:solid;
   border-color:red;
   border-width:15px;
@@ -18,7 +18,7 @@ body{
 }
 .choice-box
 {
-  display:flex;
+  
   padding: 50px 50px;
   background-color: white;
   border-radius:15px;
@@ -26,7 +26,6 @@ body{
 }
 .choice-box .fr
 {
- 
   justify-content: space-between;
 }
 .choice-box .fr p
