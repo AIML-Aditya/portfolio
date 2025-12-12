@@ -1,101 +1,204 @@
+:root {
+      --accent: #1e88e5;
+      --muted: #e0e0e0;
+      --text: #333;
+      --bg: #fff;
+    }
 
-  :root {
-    --accent: #1e88e5;
-    --muted: #e6e6e6;
-  }
-.heading
-{
-  Font-weight:600;
-  color:rgb(59, 52, 52);
-  font-size:30px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-}
-  .fuel-tabs {
-    max-width: 920px;
-    margin: 30px 170px;
-  }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      color: var(--text);
+      padding: 20px 0;
+    }
 
-  /* Hide the real radios */
-  .fuel-tabs input[type="radio"] { 
-    position: absolute; 
-    opacity: 0; 
-    pointer-events: none;
-    accent-color: red;
-  }
+    .heading {
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
 
-  /* Tab labels */
-  .fuel-tabs .tab-labels {
-    display: flex;
-    gap: 16px;              /* space between the three texts */
-    border-bottom: 2px solid var(--muted);
-    margin-bottom: 14px;
-  }
-  .fuel-tabs .tab-labels label {
-    padding: 10px 14px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size:21px;
-    color: #555;
-    border-radius: 8px 8px 0 0;
-    transition: color .2s ease;
-  }
-  /* Active tab appearance (controlled by :checked) */
-  #petrol:checked  ~ .tab-labels label[for="petrol"],
-  #diesel:checked  ~ .tab-labels label[for="diesel"],
-  #electric:checked~ .tab-labels label[for="electric"] {
-    color: var(--accent);
-    border-bottom: 3px solid var(--accent);
-  }
+    .fuel-tabs {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
-  /* Panels container */
-  .panels {
-    position: relative;
-    min-height: 160px; /* keeps height steady while switching */
-  }
-  .panel {
-    display: none;
-  }
-  /* Show the chosen panel */
-  #petrol:checked  ~ .panels .panel.hybrid,
-  #diesel:checked  ~ .panels .panel.cng,
-  #electric:checked~ .panels .panel.electric {
-    display: block;
-  }
+    /* Hide real radio inputs */
+    .fuel-tabs input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
 
-  /* Horizontal photo list */
-  .car-strip {
-    display: flex;
-    gap: 12px;
+    /* Tab Labels */
+    .tab-labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      border-bottom: 2px solid var(--muted);
+      margin-bottom: 24px;
+      justify-content: center;
+    }
 
-    padding: 8px 2px 4px;
-    
-  }
-  .car {
-    min-width: 220px;              /* card width in the horizontal list */
-    background: #fff;
-    border: 1px solid var(--muted);
-    border-radius: 12px;
-    padding: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  }
-  .car img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
-  .car .name {
-    font-size: 21px;
-    margin-top: 6px;
-    font-weight: 600;
-  }
-  .car .meta {
-    font-size: 18px;
-    font-weight: 400;
-    color:rgb(59, 52, 52);
-  }
+    .tab-labels label {
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      color: #555;
+      border-radius: 8px 8px 0 0;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
 
+    .tab-labels label:hover {
+      background: #f0f7ff;
+      color: var(--accent);
+    }
 
+    /* Active tab */
+    input#petrol:checked ~ .tab-labels label[for="petrol"],
+    input#diesel:checked ~ .tab-labels label[for="diesel"],
+    input#electric:checked ~ .tab-labels label[for="electric"] {
+      color: var(--accent);
+      border-bottom: 4px solid var(--accent);
+      background: #e3f2fd;
+    }
 
- 
+    /* Panels */
+    .panels {
+      position: relative;
+      min-height: 300px;
+    }
+
+    .panel {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    /* Show correct panel */
+    #petrol:checked ~ .panels .panel.electric,
+    #diesel:checked ~ .panels .panel.hybrid,
+    #electric:checked ~ .panels .panel.cng {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Car Strip - Horizontal Scroll on Mobile */
+    .car-strip {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 12px 4px;
+      scrollbar-width: thin;
+      scroll-snap-type: x mandatory;
+    }
+
+    .car-strip::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .car-strip::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .car-strip::-webkit-scrollbar-thumb {
+      background: #c1c1c1;
+      border-radius: 10px;
+    }
+
+    .car {
+      flex: 0 0 260px;
+      background: var(--bg);
+      border: 1px solid var(--muted);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      scroll-snap-align: start;
+    }
+
+    .car:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+    }
+
+    .car img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .car .name {
+      font-size: 18px;
+      font-weight: 600;
+      padding: 12px 14px 4px;
+      color: #222;
+    }
+
+    .car .meta {
+      font-size: 15px;
+      color: #27ae60;
+      font-weight: 500;
+      padding: 0 14px 12px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .heading {
+        font-size: 24px;
+      }
+
+      .tab-labels label {
+        padding: 10px 16px;
+        font-size: 15px;
+      }
+
+      .car {
+        flex: 0 0 220px;
+      }
+
+      .car img {
+        height: 140px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .tab-labels {
+        gap: 8px;
+      }
+
+      .tab-labels label {
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .car {
+        flex: 0 0 200px;
+      }
+
+      .car img {
+        height: 120px;
+      }
+
+      .car .name {
+        font-size: 16px;
+      }
+
+      .car .meta {
+        font-size: 14px;
+      }
+    }
