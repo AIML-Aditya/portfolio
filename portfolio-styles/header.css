@@ -26,9 +26,7 @@
   align-items: center;
   margin-right:25px;
 }
-.magnify ::placeholder{
-  text-align:center;
-}
+
 .right-section a {
   text-decoration: none;
   color: black;
@@ -38,6 +36,64 @@
 
 .right-section a:hover {
   color: #1d4ed8; /* Optional hover color */
+}
+.magnify {
+  height: 44px;
+  width: 280px;
+  padding: 0 44px 0 16px;           /* ← THIS is what fixes the sticking */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fff url('icons/search-icon.png') no-repeat right 14px center;
+  background-size: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.magnify::placeholder {
+  color: #888;
+  opacity: 1;
+  font-size: 14px;
+  line-height: normal;
+  /* Optional: vertically center the placeholder text */
+  padding-top: 2px;
+}
+
+.magnify:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+/* Make it responsive */
+@media (max-width: 992px) {
+  .magnify {
+    width: 220px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .magnify {
+    width: 180px;
+    height: 40px;
+    padding: 0 40px 0 12px;
+  }
+  .magnify::placeholder {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  .right-part {
+    gap: 10px;
+  }
+  .magnify {
+    width: 140px;
+    font-size: 13px;
+  }
+  .magnify::placeholder {
+    font-size: 12px;
+  }
 }
 
 /* ------------ MOBILE VIEW (width ≤ 720px) ------------ */
