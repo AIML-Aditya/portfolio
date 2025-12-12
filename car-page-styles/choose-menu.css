@@ -80,58 +80,75 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  margin: 28px 0;
+  margin: 32px 0;
+  height: 56px; /* Fixed height to avoid jumping */
 }
 
-.sr .new-btn,
-.sr .used-btn {
+.sr .toggle-pills {
   position: absolute;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
   background: #b2e0d1;
-  color: #0d4a3a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 30;
+}
+
+.sr .used-btn,
+.sr .new-btn {
+  padding: 10px 20px;
   font-size: 17px;
   font-weight: 600;
-  padding: 10px 20px;
+  color: #0d4a3a;
+  background: transparent;
   border: none;
-  border-radius: 10px;
   cursor: pointer;
-  z-index: 20;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
+  min-width: 70px;
 }
 
+/* Active state (New is default active) */
 .sr .new-btn {
-  left: 50px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.sr .used-btn {
-  left: 12px;
+/* When Used is clicked (you can toggle with JS later) */
+.sr .used-btn.active,
+.sr .new-btn.active {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-.sr .new-btn:hover,
-.sr .used-btn:hover {
-  background: #90d6c1;
+.sr .used-btn:hover,
+.sr .new-btn:hover {
+  background: rgba(255,255,255,0.9);
 }
 
+/* Search Input - Now has proper left padding */
 .input-container {
   width: 100%;
   max-width: 600px;
   height: 56px;
-  padding: 0 50px 0 160px;
+  padding: 0 50px 0 150px;  /* Enough space for pills */
   font-size: 18px;
-  border: 2px solid #aaa;
+  border: 2.5px solid #999;
   border-radius: 30px;
-  background: #fff url('icons/search.png') no-repeat right 16px center;
+  background: #fff url('icons/search.png') no-repeat right 18px center;
   background-size: 24px;
   outline: none;
-  transition: border 0.3s;
+  transition: all 0.3s;
 }
 
 .input-container:focus {
   border-color: #1e88e5;
-  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15);
+  box-shadow: 0 0 0 5px rgba(30,136,229,0.18);
 }
-
 .input-container::placeholder {
   color: #888;
   font-weight: 400;
